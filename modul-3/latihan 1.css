@@ -1,0 +1,82 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+/* BUTTON */
+.btn {
+    padding: 10px 16px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    margin: 5px;
+    transition: 0.3s;
+}
+
+/* Variasi */
+.btn-primary {
+    background-color: #007bff;
+    color: white;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    color: white;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    color: white;
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 2px solid #007bff;
+    color: #007bff;
+}
+
+/* Hover effect */
+.btn:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+/* BADGE */
+.badge {
+    padding: 6px 10px;
+    border-radius: 12px;
+    color: white;
+    margin: 5px;
+}
+
+.badge-success {
+    background-color: green;
+}
+
+.badge-warning {
+    background-color: orange;
+}
+
+.badge-error {
+    background-color: red;
+}
+
+/* ALERT */
+.alert {
+    padding: 12px;
+    border-radius: 6px;
+    margin: 10px 0;
+    color: white;
+}
+
+.alert.success {
+    background-color: green;
+}
+
+.alert.warning {
+    background-color: orange;
+}
+
+.alert.error {
+    background-color: red;
+}
