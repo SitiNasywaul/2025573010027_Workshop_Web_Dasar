@@ -1,0 +1,95 @@
+body {
+  font-family: sans-serif;
+  padding: 20px;
+}
+
+/* =====================
+   1. ACCORDION
+===================== */
+details {
+  border: 2px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+  transition: 0.3s;
+}
+
+details:focus-within {
+  border-color: #e3a6c6;
+}
+
+summary {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+
+/* =====================
+   2. IMAGE OVERLAY
+===================== */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.item {
+  position: relative;
+  overflow: hidden;
+}
+
+.item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* overlay pakai before */
+.item::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.item span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-weight: bold;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.item:hover::before {
+  opacity: 1;
+}
+
+.item:hover span {
+  opacity: 1;
+}
+
+
+/* =====================
+   3. PROGRESS BAR
+===================== */
+.progress {
+  height: 20px;
+  background: #eee;
+  margin-bottom: 10px;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* fill pakai before */
+.progress::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: var(--progress);
+  background: #e3a6c6;
+}
