@@ -1,0 +1,166 @@
+/* style.css */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(135deg, #7b2ff7, #f107a3);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 20px;
+}
+
+.container {
+  width: 100%;
+  max-width: 700px;
+  background: white;
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #7b2ff7;
+}
+
+form {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+input {
+  flex: 1;
+  min-width: 200px;
+}
+
+input,
+select,
+button {
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+input,
+select {
+  border: 2px solid #ddd;
+}
+
+button {
+  cursor: pointer;
+  background: #7b2ff7;
+  color: white;
+  transition: 0.2s;
+}
+
+button:hover {
+  transform: scale(1.03);
+}
+
+.error {
+  color: red;
+  margin-top: 10px;
+  min-height: 20px;
+}
+
+.top-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.filters {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.filter-btn.active {
+  background: #f107a3;
+}
+
+#counter {
+  margin: 20px 0;
+  font-weight: bold;
+  color: #444;
+}
+
+ul {
+  list-style: none;
+}
+
+.todo-item {
+  background: #f7f7f7;
+  padding: 15px;
+  border-radius: 15px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  cursor: grab;
+}
+
+.todo-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+}
+
+.todo-text {
+  word-break: break-word;
+}
+
+.done .todo-text {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.priority {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  color: white;
+}
+
+.rendah {
+  background: #28c76f;
+}
+
+.sedang {
+  background: #ff9f43;
+}
+
+.tinggi {
+  background: #ea5455;
+}
+
+.delete-btn {
+  background: #ea5455;
+  padding: 8px 12px;
+}
+
+.edit-input {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.dragging {
+  opacity: 0.5;
+}

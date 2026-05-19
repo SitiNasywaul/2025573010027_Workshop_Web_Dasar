@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini Shop Aesthetic</title>
+
+    <style>
+      body {
+        margin: 0;
+        font-family: "Segoe UI", sans-serif;
+        background: linear-gradient(135deg, #ff9ecf, #ffc3e3);
+        min-height: 100vh;
+        padding: 20px;
+      }
+
+      /* ICON CART */
+      .cart-icon {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background: rgba(255, 255, 255, 0.35);
+        backdrop-filter: blur(10px);
+        padding: 10px 15px;
+        border-radius: 50px;
+        font-size: 20px;
+        box-shadow: 0 4px 12px rgba(255, 105, 180, 0.3);
+      }
+
+      .badge {
+        background: #ff4da6;
+        color: white;
+        padding: 3px 8px;
+        border-radius: 999px;
+        font-size: 12px;
+      }
+
+      /* GRID */
+      .products {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+        margin-top: 70px;
+      }
+
+      /* CARD */
+      .card {
+        background: rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(12px);
+        border-radius: 20px;
+        padding: 12px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 6px 15px rgba(255, 105, 180, 0.2);
+      }
+
+      .card:hover {
+        transform: translateY(-5px) scale(1.04);
+        box-shadow: 0 10px 20px rgba(255, 105, 180, 0.35);
+      }
+
+      .card img {
+        width: 60%;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        border-radius: 14px;
+        margin: 0 auto 10px;
+        display: block;
+      }
+
+      .card h4 {
+        margin: 6px 0 2px;
+        font-size: 14px;
+      }
+
+      .card p {
+        font-size: 13px;
+        color: #444;
+      }
+
+      .card button {
+        margin-top: 6px;
+        padding: 6px 10px;
+        border: none;
+        border-radius: 20px;
+        background: linear-gradient(135deg, #ff4da6, #ff85c1);
+        color: white;
+        cursor: pointer;
+      }
+
+      .card button:active {
+        transform: scale(0.9);
+      }
+
+      /* CART */
+      .cart {
+        margin-top: 30px;
+        background: rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(12px);
+        padding: 15px;
+        border-radius: 20px;
+        box-shadow: 0 6px 15px rgba(255, 105, 180, 0.2);
+      }
+
+      .cart-item {
+        margin-bottom: 10px;
+      }
+
+      button.plus {
+        background: #ff85c1;
+      }
+      button.minus {
+        background: #ffd6e8;
+      }
+      button.remove {
+        background: #ff4d6d;
+        color: white;
+      }
+
+      .checkout {
+        width: 100%;
+        padding: 10px;
+        border-radius: 20px;
+        border: none;
+        background: linear-gradient(135deg, #ff4da6, #ff85c1);
+        color: white;
+        margin-top: 10px;
+      }
+
+      /* ANIMASI TERBANG */
+      .fly-img {
+        position: fixed;
+        z-index: 999;
+        pointer-events: none;
+        border-radius: 12px;
+        transition: all 0.7s cubic-bezier(0.65, -0.55, 0.25, 1.55);
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- ICON -->
+    <div class="cart-icon">🛒 <span id="count" class="badge">0</span></div>
+
+    <!-- PRODUK -->
+    <div class="products" id="products"></div>
+
+    <!-- CART -->
+    <div class="cart">
+      <h3>Keranjang</h3>
+      <div id="cartItems"></div>
+      <h4>Total: Rp <span id="total">0</span></h4>
+      <button class="checkout" id="checkout">Checkout 💖</button>
+    </div>
+
+    <script src="latihan-2.js"></script>
+  </body>
+</html>

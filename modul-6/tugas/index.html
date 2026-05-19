@@ -1,0 +1,50 @@
+<!-- index.html -->
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List Lengkap</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>📝 Todo List</h1>
+
+      <form id="todoForm">
+        <input
+          type="text"
+          id="taskInput"
+          placeholder="Masukkan tugas..."
+          maxlength="100"
+        />
+
+        <select id="priority">
+          <option value="Rendah">Rendah</option>
+          <option value="Sedang">Sedang</option>
+          <option value="Tinggi">Tinggi</option>
+        </select>
+
+        <button type="submit">Tambah</button>
+      </form>
+
+      <p class="error" id="error"></p>
+
+      <div class="top-actions">
+        <div class="filters">
+          <button class="filter-btn active" data-filter="all">Semua</button>
+          <button class="filter-btn" data-filter="active">Aktif</button>
+          <button class="filter-btn" data-filter="done">Selesai</button>
+        </div>
+
+        <button id="clearDone">Hapus Semua Selesai</button>
+      </div>
+
+      <p id="counter">0 tugas tersisa</p>
+
+      <ul id="todoList"></ul>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
