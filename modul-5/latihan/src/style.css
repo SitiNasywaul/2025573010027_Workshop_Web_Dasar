@@ -16,6 +16,15 @@ body {
 }
 
 /* ================= NAVBAR ================= */
+body {
+  margin: 0;
+  display: block;
+}
+
+.card {
+  width: 100%;
+}
+
 nav {
   display: flex;
   justify-content: space-between;
@@ -68,11 +77,15 @@ nav a {
 
 /* ================= CONTAINER ================= */
 .container {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  padding: 20px;
-  flex-wrap: wrap;
+}
+
+.card {
+  background: pink;
+  padding: 40px;
+  text-align: center;
 }
 
 /* ================= CARD ================= */
